@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        int trk, mat, kmy, fzk;
+        Scanner inp = new Scanner(System.in);
+        System.out.println("türkçe notunuz kaç?");
+        trk = inp.nextInt();
+        System.out.println("matematik notunuz kaç?");
+        mat = inp.nextInt();
+        System.out.println("kimya notunuz kaç?");
+        kmy = inp.nextInt();
+        System.out.println("fizik notunuz kaç?");
+        fzk = inp.nextInt();
+        int ort=(trk+mat+kmy+fzk);
+        double sonuc= ort/4;
+        boolean snc1 = (sonuc>=50);
+        boolean snc2 = (sonuc<=50);
+        boolean drm = snc1 || snc2;
+        String str = sonuc>=50 ? "Sınıfı geçti":"Sınıfta kaldı";
+        System.out.println("Ortalamanız:"+ sonuc);
+        System.out.print(str);
+
+    }
+}
